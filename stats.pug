@@ -1,0 +1,51 @@
+doctype html 
+html(lang='en')
+    head 
+        title Vendor Statistics 
+    body 
+        div#header
+            a(href="/") Shop
+            |
+            |
+            |
+            a(href="/stats.pug") Stats 
+        #test
+            table(style='width:100%', border='1')
+                tr
+                    th Stats
+                    th Grand and Toy
+                    th Indigo
+                    th Staples
+                tr
+                    td Orders
+                    td #{grandNumOrders}
+                    td #{indigoNumOrders}
+                    td #{staplesNumOrders}
+                tr
+                    td Avg price per order
+                    td #{grandAvgTotal}
+                    td #{indigoAvgTotal}
+                    td #{staplesAvgTotal}
+                tr
+                    td Most popular item
+                    td #{grandPopular}
+                    td #{indigoPopular}
+                    td #{staplesPopular}
+        //div#grand
+            h2 Grand and Toy Stats 
+            p Number of orders: #{grandNumOrders}
+            p Average total price per order: #{grandAvgTotal}
+            p Most popular Item: #{grandPopular}
+        //div#indigo 
+            h2 Indigo Stats 
+            p Number of orders: #{indigoNumOrders}
+            p Average total price per order: #{indigoAvgTotal}
+            p Most popular Item: #{indigoPopular}
+
+        //div#staples 
+            h2 Staples Stats 
+            p Number of orders: #{staplesNumOrders}
+            p Average total price per order: #{staplesAvgTotal}
+            p Most popular Item: #{staplesPopular}
+
+link(rel='stylesheet', href='./styles.css')
